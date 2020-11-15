@@ -1,0 +1,339 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C6076732-34D6-4B92-90A1-239F1D292AE9}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RentHouseBHK</RootNamespace>
+    <AssemblyName>RentHouseBHK</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ApplicationBlocks.Data">
+      <HintPath>dll\Microsoft.ApplicationBlocks.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.Ribbon, Version=2.0.0.0, Culture=neutral, PublicKeyToken=928736e248aa81f9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>dll\System.Windows.Forms.Ribbon.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BHKBUS\clsComboItem.cs" />
+    <Compile Include="BHKBUS\clsSystemProperties.cs" />
+    <Compile Include="BHKBUS\clsDatabase.cs" />
+    <Compile Include="BHKBUS\clsDatabaseExecute.cs" />
+    <Compile Include="BHKBUS\clsEncryption.cs" />
+    <Compile Include="BHKBUS\clsXML.cs" />
+    <Compile Include="BHKDAO\BranchOfficeDAO.cs" />
+    <Compile Include="BHKDAO\ContractDAO.cs" />
+    <Compile Include="BHKDAO\CustomerDAO.cs" />
+    <Compile Include="BHKDAO\EmployeeDAO.cs" />
+    <Compile Include="BHKDAO\HouseDAO.cs" />
+    <Compile Include="BHKDAO\HouseholderDAO.cs" />
+    <Compile Include="BHKDAO\HouseTypeDAO.cs" />
+    <Compile Include="BHKDAO\LocationDAO.cs" />
+    <Compile Include="BHKDAO\PreviewDAO.cs" />
+    <Compile Include="BHKDAO\UsersDAO.cs" />
+    <Compile Include="BHKDTO\BranchOfficeDTO.cs" />
+    <Compile Include="BHKDTO\ContractDTO.cs" />
+    <Compile Include="BHKDTO\CustomerDTO.cs" />
+    <Compile Include="BHKDTO\EmployeeDTO.cs" />
+    <Compile Include="BHKDTO\HouseDTO.cs" />
+    <Compile Include="BHKDTO\HouseholderDTO.cs" />
+    <Compile Include="BHKDTO\HouseTypeDTO.cs" />
+    <Compile Include="BHKDTO\LocationDTO.cs" />
+    <Compile Include="BHKDTO\PreviewDTO.cs" />
+    <Compile Include="BHKDTO\UsersDTO.cs" />
+    <Compile Include="BHKGUI\frmBranchOfficeInsUpd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BHKGUI\frmBranchOfficeInsUpd.Designer.cs">
+      <DependentUpon>frmBranchOfficeInsUpd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BHKGUI\frmConnectDatabase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BHKGUI\frmConnectDatabase.Designer.cs">
+      <DependentUpon>frmConnectDatabase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BHKGUI\frmContractInsUpd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BHKGUI\frmContractInsUpd.Designer.cs">
+      <DependentUpon>frmContractInsUpd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BHKGUI\frmContract.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BHKGUI\frmContract.Designer.cs">
+      <DependentUpon>frmContract.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BHKGUI\frmChangePass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BHKGUI\frmChangePass.Designer.cs">
+      <DependentUpon>frmChangePass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BHKGUI\frmCustomerInsUpd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BHKGUI\frmCustomerInsUpd.Designer.cs">
+      <DependentUpon>frmCustomerInsUpd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BHKGUI\frmEmployeeInsUpd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BHKGUI\frmEmployeeInsUpd.Designer.cs">
+      <DependentUpon>frmEmployeeInsUpd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BHKGUI\frmHouseInsUpd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BHKGUI\frmHouseInsUpd.Designer.cs">
+      <DependentUpon>frmHouseInsUpd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BHKGUI\frmHouseholderInsUpd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BHKGUI\frmHouseholderInsUpd.Designer.cs">
+      <DependentUpon>frmHouseholderInsUpd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BHKGUI\frmHouseTypeInsUpd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BHKGUI\frmHouseTypeInsUpd.Designer.cs">
+      <DependentUpon>frmHouseTypeInsUpd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BHKGUI\frmLocationInsUpd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BHKGUI\frmLocationInsUpd.Designer.cs">
+      <DependentUpon>frmLocationInsUpd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BHKGUI\frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BHKGUI\frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BHKGUI\frmPreviewInsUpd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BHKGUI\frmPreviewInsUpd.Designer.cs">
+      <DependentUpon>frmPreviewInsUpd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BHKGUI\frmPreview.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BHKGUI\frmPreview.Designer.cs">
+      <DependentUpon>frmPreview.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BHKGUI\frmHouseType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BHKGUI\frmHouseType.Designer.cs">
+      <DependentUpon>frmHouseType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BHKGUI\frmHouse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BHKGUI\frmHouse.Designer.cs">
+      <DependentUpon>frmHouse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BHKGUI\frmBranchOffice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BHKGUI\frmBranchOffice.Designer.cs">
+      <DependentUpon>frmBranchOffice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BHKGUI\frmHouseholder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BHKGUI\frmHouseholder.Designer.cs">
+      <DependentUpon>frmHouseholder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BHKGUI\frmCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BHKGUI\frmCustomer.Designer.cs">
+      <DependentUpon>frmCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BHKGUI\frmLocation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BHKGUI\frmLocation.Designer.cs">
+      <DependentUpon>frmLocation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BHKUtilities\BHKMessages\clsMessages.cs" />
+    <Compile Include="BHKUtilities\BHKMessages\clsMessagesEnum.cs" />
+    <Compile Include="BHKUtilities\BHKMessages\frmVMHMessages.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BHKUtilities\BHKMessages\frmVMHMessages.Designer.cs">
+      <DependentUpon>frmVMHMessages.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BHKUtilities\BHKMessages\frmVMHPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BHKUtilities\BHKMessages\frmVMHPopup.Designer.cs">
+      <DependentUpon>frmVMHPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BHKGUI\frmEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BHKGUI\frmEmployee.Designer.cs">
+      <DependentUpon>frmEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="BHKGUI\frmBranchOfficeInsUpd.resx">
+      <DependentUpon>frmBranchOfficeInsUpd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BHKGUI\frmConnectDatabase.resx">
+      <DependentUpon>frmConnectDatabase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BHKGUI\frmContractInsUpd.resx">
+      <DependentUpon>frmContractInsUpd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BHKGUI\frmContract.resx">
+      <DependentUpon>frmContract.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BHKGUI\frmChangePass.resx">
+      <DependentUpon>frmChangePass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BHKGUI\frmCustomerInsUpd.resx">
+      <DependentUpon>frmCustomerInsUpd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BHKGUI\frmEmployeeInsUpd.resx">
+      <DependentUpon>frmEmployeeInsUpd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BHKGUI\frmHouseInsUpd.resx">
+      <DependentUpon>frmHouseInsUpd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BHKGUI\frmHouseholderInsUpd.resx">
+      <DependentUpon>frmHouseholderInsUpd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BHKGUI\frmHouseTypeInsUpd.resx">
+      <DependentUpon>frmHouseTypeInsUpd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BHKGUI\frmLocationInsUpd.resx">
+      <DependentUpon>frmLocationInsUpd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BHKGUI\frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BHKGUI\frmPreviewInsUpd.resx">
+      <DependentUpon>frmPreviewInsUpd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BHKGUI\frmPreview.resx">
+      <DependentUpon>frmPreview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BHKGUI\frmHouseType.resx">
+      <DependentUpon>frmHouseType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BHKGUI\frmHouse.resx">
+      <DependentUpon>frmHouse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BHKGUI\frmBranchOffice.resx">
+      <DependentUpon>frmBranchOffice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BHKGUI\frmHouseholder.resx">
+      <DependentUpon>frmHouseholder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BHKGUI\frmCustomer.resx">
+      <DependentUpon>frmCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BHKGUI\frmLocation.resx">
+      <DependentUpon>frmLocation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BHKUtilities\BHKMessages\frmVMHMessages.resx">
+      <DependentUpon>frmVMHMessages.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BHKUtilities\BHKMessages\frmVMHPopup.resx">
+      <DependentUpon>frmVMHPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BHKGUI\frmEmployee.resx">
+      <DependentUpon>frmEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="bin\Debug\Config.xml" />
+    <Content Include="Config.xml" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
